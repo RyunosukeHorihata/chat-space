@@ -1,0 +1,29 @@
+.chat-main
+  .main-header
+    .left-content
+      .left-content__g-name
+        Test1
+      .left-content__m-list
+        tester tester2
+    .right-content
+      .right-content__edit-btn
+        = link_to "Edit", "#", class: "button-e"
+  .messages
+    .message-items
+      .message-items__top-content
+        .message-items__top-content-user
+          hoge
+        .message-items__top-content-date
+          2020/05
+      .message-items__bottom-content
+        hey
+  .form
+    .left-content
+      .left-content__typetext
+        type a message
+      %label{class: "left-content__pic"}
+        = icon('far', 'image')
+        %input{type: "file"}
+    .right-content
+      .right-content__send-btn
+        = link_to "Send", "#", class: "button-s"
