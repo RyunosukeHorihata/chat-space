@@ -28,12 +28,13 @@
         height: 20px;
         display: flex;
         align-items: center;
+        
       }
-        &__icons-note{
+        .icon-n{
           color: #ffffff;
-          margin-left: auto;
+          margin-left: 25px;
         }
-        &__icons-edit{
+        .icon-e{
           color: #ffffff;
           margin-left: 5px;
         }
