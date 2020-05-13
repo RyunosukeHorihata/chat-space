@@ -17,13 +17,21 @@
           2020/05
       .message-items__bottom-content
         hey
-  .form
-    .left-content
-      .left-content__typetext
-        type a message
-      %label{class: "left-content__pic"}
-        = icon('far', 'image')
-        %input{type: "file"}
-    .right-content
-      .right-content__send-btn
-        = link_to "Send", "#", class: "button-s"
+  -# .form
+  -#   .left-content
+  -#     .left-content__typetext
+  -#       type a message
+  -#     %label{class: "left-content__pic"}
+  -#       = icon('far', 'image')
+  -#       %input{type: "file"}
+  -#   .right-content
+  -#     .right-content__send-btn
+  -#       = link_to "Send", "#", class: "button-s"
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
